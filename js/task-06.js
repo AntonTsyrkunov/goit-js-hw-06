@@ -6,6 +6,7 @@ const changeBorderColor = (event) =>{
     if (event.target.value.length < Number(inputField.dataset.length)) {
         inputField.classList.add('invalid');
     } else {
+        inputField.classList.remove('invalid');
         inputField.classList.add('valid');
     };
 };

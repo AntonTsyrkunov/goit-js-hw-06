@@ -9,32 +9,22 @@ const ingredients = [
 
 const listOf = document.querySelector('#ingredients');
 
-const listElements = [];
+const elementsNumber = document.createDocumentFragment();
 
 for (const ingredient of ingredients) {
 
-  const listElement = document.createElement('li');
+  const newElement = document.createElement('li'); 
 
-  listElement.classList.add('item');
+  newElement.classList.add = 'item';
 
-  listElement.innerHTML = ingredient;
+  newElement.textContent = ingredient;
 
-  listElements.push(listElement);
+  elementsNumber.appendChild(newElement);
 
 }
 
+listOf.appendChild(elementsNumber);
 
-listOf.append(...listElements);
 console.log(listOf);
 
 
-
-
-
-
-// Напиши скрипт, який для кожного елемента масиву ingredients:
-
-// Створить окремий елемент <li>. Обов'язково використовуй метод document.createElement().
-// Додасть назву інгредієнта як його текстовий вміст.
-// Додасть елементу клас item.
-// Після чого, вставить усі <li> за одну операцію у список ul#ingredients.
